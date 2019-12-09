@@ -1,0 +1,22 @@
+delimiter /
+CREATE PROCEDURE s()
+begin
+Declare x int default 0;
+Declare y varchar(20);
+Declare z int(10) default 0;
+declare r
+cursor for 
+select employee_no,employee_name,salary
+from EMPLOYEE_
+order by salary desc limit 5;
+DECLARE CONTINUE HANDLER
+FOR NOT FOUND SET FINISHED = 1;
+open r;
+lp:loop
+FETCH r INTO x,y,z;
+END LOOP lp;
+CLOSE r;
+end;
+/
+DELIMITTER;
+CALL raj.sp();

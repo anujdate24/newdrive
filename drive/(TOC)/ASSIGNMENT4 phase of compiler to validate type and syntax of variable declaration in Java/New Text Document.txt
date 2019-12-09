@@ -1,0 +1,4 @@
+lex prog.l
+yacc -d prog.y
+gcc lex.yy.c y.tab
+./a.out

@@ -1,0 +1,6 @@
+lex sentence.l
+yacc -d sentance.y
+gcc lex.yy.c y.tab.c
+./a.out
+type
+./a.out
